@@ -1,0 +1,44 @@
+.grid-5, .grid-15, .grid-25 {
+  display: grid;
+}
+
+.grid-5, .grid-15 {
+  grid-gap: 0.1vw;  
+}
+
+.grid-5 {
+  grid-template-columns: repeat(3, 13.2vw);
+  grid-template-rows: repeat(2, 13.2vw); 
+  
+  .square:nth-child(3n + 2) {
+    background: $secondary-color;
+    &:hover {
+      background: $primary-color;
+    }
+  }
+}
+
+.grid-15 {
+  grid-template-columns: repeat(5, 7.9vw);
+  grid-template-rows: repeat(3, 7.9vw);
+
+  .square:nth-child(5n + 3), .square:nth-child(2) {
+    background: $secondary-color;
+    &:hover {
+      background: $primary-color;
+    }
+  }
+}
+
+.grid-25 {
+  grid-template-columns: repeat(5, 7.9vw);
+  grid-template-rows: repeat(5, 7.9vw);
+  grid-gap: 0.08vw;
+
+  .square:nth-child(6), .square:nth-child(7), .square:nth-child(8), .square:nth-child(13) {
+    background: $secondary-color;
+    &:hover {
+      background: $primary-color;
+    }
+  }
+}

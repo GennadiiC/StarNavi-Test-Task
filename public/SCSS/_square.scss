@@ -1,0 +1,10 @@
+.square {
+  border: 0.2rem solid $secondary-color;
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+.fifth-square {
+  display: none;
+}

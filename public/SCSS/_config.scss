@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #FDF6FF;
+}
+
+$primary-color: #FDF6FF;
+$secondary-color: blue;
+
+@mixin media-sm {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}

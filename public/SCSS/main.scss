@@ -1,0 +1,113 @@
+@import 'config';
+@import 'input';
+@import 'display';
+@import 'grid';
+@import 'square';
+
+
+.field-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.grid-container {
+  width: 40%;
+  margin-top: 0.3rem;
+}
+
+@include media-sm {
+  .field-container {
+    flex-direction: column;
+  }
+
+  .grid-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  .input-field {
+
+    select, button {
+      height: 2.2rem;
+      font-size: 3vw;
+    }
+
+    button {
+      width: 25%;
+    }
+  }
+
+  .grid-5 {
+    margin: auto 4.6rem;
+    grid-template-columns: repeat(3, 17vw);
+    grid-template-rows: repeat(2, 17vw);
+  }
+
+  .grid-15, .grid-25 {
+    margin: auto 3.6rem;
+  }
+
+  .grid-15 {
+    grid-template-columns: repeat(5, 12vw);
+    grid-template-rows: repeat(3, 12vw);
+  }
+
+  .grid-25 {
+    grid-template-columns: repeat(5, 12vw);
+    grid-template-rows: repeat(5, 12vw);
+  }
+
+  .display {
+    width: 80%;
+    margin: auto;
+    h1 {
+      font-size: 4.4vw;
+    }
+    .pars {
+      font-size: 2.5vw;
+    }
+  }
+}
+
+@include media-md {
+  .grid-container {
+    width: 35%;
+  }
+
+  .input-field {
+
+    select, button {
+      height: 2.6rem;
+      font-size: 2vw;
+    }
+
+  }
+
+  .grid-5 {
+    grid-template-columns: repeat(3, 11.5vw);
+    grid-template-rows: repeat(2, 11.5vw);
+  }
+
+  .grid-15 {
+    grid-template-columns: repeat(5, 6.9vw);
+    grid-template-rows: repeat(3, 6.9vw);
+  }
+
+  .grid-25 {
+    grid-template-columns: repeat(5, 6.9vw);
+    grid-template-rows: repeat(5, 6.9vw);
+  }
+
+  .display {
+    width: 40%;
+    
+    h1 {
+      font-size: 2.5vw;
+    }
+
+    .pars {
+      margin-top: 0.5rem;
+      font-size: 1.7vw;
+    }
+  }
+}
