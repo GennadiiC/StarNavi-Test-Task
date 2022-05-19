@@ -4,15 +4,15 @@ import { AppContext } from './Context';
 
 export default function Grid ({ field }) {
 
-  const { setXy, setXyArr } = useContext(AppContext);
+  const { resetXy, resetXyArr } = useContext(AppContext);
 
   const [ choice, setChoice ] = useState();
   const [ submit, setSubmit ] = useState();
 
   useEffect(() => {
     setSubmit(false)
-    setXy('')
-    setXyArr([])
+    resetXy()
+    resetXyArr()
   }, [choice])
 
   let squares = Array.from({length: choice});

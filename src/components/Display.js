@@ -1,30 +1,9 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { AppContext } from "./Context";
 
 export default function Display () {
 
-  const { xy, xyArr, setXyArr } = useContext(AppContext);
-
-  const arrHandler = () => {
-    setXyArr(prevXyarr => {
-      return [
-        ...prevXyarr,
-        xy
-      ]
-    })
-    if (xyArr.length === 10) {
-      setXyArr(prevXyarr => {
-        return prevXyarr.slice(1)
-      })
-    } else if (xy === '') {
-      setXyArr([]);
-    }
-    return xyArr;
-  }
-
-  useEffect(() => {
-    arrHandler()
-  }, [xy])
+  const { xyArr } = useContext(AppContext);
 
   return (
     <div className="display"> 
