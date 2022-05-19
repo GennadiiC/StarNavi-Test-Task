@@ -8,7 +8,7 @@ function App() {
 
   const [ field, setField ] = useState([]);
 
-  const { xy, xyArr, arrHandler } = useContext(AppContext);
+  const { xy, arrHandler } = useContext(AppContext);
 
   useEffect(() => {
     axios.get('http://demo7919674.mockable.io/')
