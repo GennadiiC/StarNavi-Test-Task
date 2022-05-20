@@ -11,7 +11,7 @@ function App() {
   const { xy, arrHandler } = useContext(AppContext);
 
   useEffect(() => {
-    axios.get('http://demo7919674.mockable.io/')
+    axios.get('https://demo7919674.mockable.io/')
       .then(response => {
         setField(response.data);
       })
